@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
 import { getAllPosts } from "../../lib/posts";
 import FeaturedImage from "../../components/FeaturedImage";
+import Date from "../../components/Date";
 
 export async function getStaticProps() {
     const allPosts = await getAllPosts();
@@ -47,6 +48,9 @@ export default function BlogHome({ allPosts }) {
                                     <h2 className="py-4">
                                         <Link href={`/blog/${post.slug}`} className="text-blue-400 text-2xl hover:text-blue-600">{post.title}</Link>
                                     </h2>
+                                    <div className="py-4">
+                                        Published on <Date dateString={post.date} />
+                                    </div>
                                     <div className="text-lg" dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
                                     <div className="py-4">
                                         Posted under {
