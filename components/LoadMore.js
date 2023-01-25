@@ -1,17 +1,20 @@
 import { getPostList } from "../lib/posts";
 import { useState } from "react";
 
-export default function LoadMore({posts, setPosts}) {
+export default function LoadMore({posts, setPosts, taxonomy = null}) {
 
-    const [buttonText, setButtonText] = useState('Load more posts');
-    const [buttonDisabled, setButtonDisabled] = useState(false);
+    let bT = posts.pageInfo.hasNextPage ? 'Load more posts' : 'No more posts to load';
+    let bD = posts.pageInfo.hasNextPage ? false : true;
+
+    const [buttonText, setButtonText] = useState(bT);
+    const [buttonDisabled, setButtonDisabled] = useState(bD);
 
     const handleOnclick = async (event) => {
 
         setButtonText('Loading...');
         setButtonDisabled(true);
 
-        const morePosts = await getPostList(posts.pageInfo.endCursor);
+        const morePosts = await getPostList(posts.pageInfo.endCursor, taxonomy);
 
         let updatedPosts = {
             pageInfo: {
