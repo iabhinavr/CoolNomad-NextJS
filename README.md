@@ -1,3 +1,11 @@
+## What is this
+
+*This is a duplicate of: [https://github.com/iabhinavr/nextjs-blog](https://github.com/iabhinavr/nextjs-blog)*
+
+It was created for a video series published on YouTube on how to create a headless WordPress site using Next.js as the frontend.
+
+Playlist: https://www.youtube.com/playlist?list=PLpvmpNjU5ooWkh1xAldsikmTxgoo5gc2v
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
