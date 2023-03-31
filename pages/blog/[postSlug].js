@@ -12,7 +12,7 @@ export async function getStaticProps({ params }) {
 
     let featuredImageUrl = "https://wp.abhinavr.com/wp-content/uploads/2022/12/travel_icy-polar_022K.jpg";
 
-    if(postData.featuredImage.node.mediaDetails.sizes[0].sourceUrl) {
+    if(postData.featuredImage) {
         featuredImageUrl = postData.featuredImage.node.mediaDetails.sizes[0].sourceUrl;
     }
 
