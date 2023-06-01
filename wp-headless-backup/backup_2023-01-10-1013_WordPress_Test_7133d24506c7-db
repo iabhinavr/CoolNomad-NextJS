@@ -274,7 +274,7 @@ CREATE TABLE `wp_users` (
 
 # Approximate rows expected in table: 1
  
-INSERT INTO `wp_users` VALUES (1, 'nextjs_user', '$P$BP2s.9/0nn7i1v20QBsC9tsUnYwwQ1/', 'nextjs_user', 'test@example.com', 'http://abhinavr.com', '2022-12-19 08:39:03', '', 0, 'nextjs_user');
+INSERT INTO `wp_users` VALUES (1, 'nextjs_user', '$P$BH26MCYc8nKhaKSxeRUqfmsks8KiF9/', 'nextjs_user', 'test@example.com', 'http://abhinavr.com', '2022-12-19 08:39:03', '', 0, 'nextjs_user');
 # End of data contents of table `wp_users`
 
 # Table: `wp_usermeta`
